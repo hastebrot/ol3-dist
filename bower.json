@@ -1,0 +1,9 @@
+{
+  "name": "ol3",
+  "version": "3.1.1",
+  "main": [
+    "dist/ol.js",
+    "dist/ol.css"
+  ],
+  "ignore": []
+}
