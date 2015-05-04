@@ -1,6 +1,5 @@
 goog.provide('ol.interaction.Pointer');
 
-goog.require('goog.asserts');
 goog.require('goog.functions');
 goog.require('goog.object');
 goog.require('ol.MapBrowserEvent.EventType');
@@ -185,13 +184,10 @@ ol.interaction.Pointer.handleEvent = function(mapBrowserEvent) {
   var stopEvent = false;
   this.updateTrackedPointers_(mapBrowserEvent);
   if (this.handlingDownUpSequence) {
-    if (mapBrowserEvent.type ==
-        ol.MapBrowserEvent.EventType.POINTERDRAG) {
+    if (mapBrowserEvent.type == ol.MapBrowserEvent.EventType.POINTERDRAG) {
       this.handleDragEvent_(mapBrowserEvent);
-    } else if (mapBrowserEvent.type ==
-        ol.MapBrowserEvent.EventType.POINTERUP) {
-      this.handlingDownUpSequence =
-          this.handleUpEvent_(mapBrowserEvent);
+    } else if (mapBrowserEvent.type == ol.MapBrowserEvent.EventType.POINTERUP) {
+      this.handlingDownUpSequence = this.handleUpEvent_(mapBrowserEvent);
     }
   }
   if (mapBrowserEvent.type == ol.MapBrowserEvent.EventType.POINTERDOWN) {

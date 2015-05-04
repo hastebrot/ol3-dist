@@ -1,6 +1,6 @@
 {
   "name": "ol3",
-  "version": "3.1.1",
+  "version": "3.4.0",
   "main": [
     "dist/ol.js",
     "dist/ol.css"

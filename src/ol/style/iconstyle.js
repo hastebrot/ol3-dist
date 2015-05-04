@@ -302,14 +302,6 @@ ol.style.Icon.prototype.getOrigin = function() {
 
 
 /**
- * @inheritDoc
- */
-ol.style.Icon.prototype.getHitDetectionOrigin = function() {
-  return this.getOrigin();
-};
-
-
-/**
  * @return {string|undefined} Image src.
  * @api
  */
@@ -385,7 +377,7 @@ ol.style.IconImage_ = function(image, src, crossOrigin, imageState) {
 
   /**
    * @private
-   * @type {Array.<number>}
+   * @type {Array.<goog.events.Key>}
    */
   this.imageListenerKeys_ = null;
 
